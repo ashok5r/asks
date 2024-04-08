@@ -10,6 +10,6 @@ class Referral(models.Model):
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=256)
     referral_code = models.CharField(max_length=10, blank=True, null=True)
     registration_timestamp = models.DateTimeField(auto_now_add=True)
